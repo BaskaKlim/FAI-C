@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1583764464 source:c:\users\barbara.klimekova\fai\c\ukol2\main.c
+	<stdio.h>
+	"fce.h"
+	<stdbool.h>
+
+1583762023 c:\users\barbara.klimekova\fai\c\ukol2\fce.h
+
+1583762023 source:c:\users\barbara.klimekova\fai\c\ukol2\fce.c
+	<limits.h>
+
