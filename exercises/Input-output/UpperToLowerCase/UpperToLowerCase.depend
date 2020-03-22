@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1584910014 source:c:\users\barbara.klimekova\fai\c\exercises\input-output\uppertolowercase\uppertolowercase.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+
