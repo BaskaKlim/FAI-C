@@ -1,6 +1,6 @@
 /**********************************
  *
- * Ucebnice_jazyka C        ver. 2.0
+ * Ucebnice_jazyka C        ver. 3.0
  * str51/ prklad 1)
  * ===============================
  *
@@ -16,12 +16,13 @@
 
 int main(){
 
-int char1, char2;
+char znak1,znak2;
 
 printf("nacitaj dva znaky: ");
-char1 = getchar();
-//druhy znak deklarujem priamo v podmienkovom vyraze
-putchar((char1< (char2 = getchar())) ? char1: char2);
+// chcem aby som mohla zadat oba znaky za sebou a cez , medzi nimi
+scanf("%c,%c", &znak1,&znak2 );
+//musim pouzit putchar() lebo do nej sa da vlozit podmieneny vyraz, prinff asi nie
+putchar((znak1<znak2) ? znak1: znak2);
 
 return 0;
 }
