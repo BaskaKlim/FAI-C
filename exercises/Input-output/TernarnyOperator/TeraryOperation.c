@@ -1,6 +1,6 @@
 /**********************************
  *
- * Ucebnice_jazyka C        ver. 1.0
+ * Ucebnice_jazyka C        ver. 2.0
  * str51/ prklad 1)
  * ===============================
  *
@@ -20,10 +20,8 @@ int char1, char2;
 
 printf("nacitaj dva znaky: ");
 char1 = getchar();
-char2 = getchar();
-
-//vypis znak / vo vnutri podmieneny vyraz ak je c<d vypis c inak vypis d
-putchar((char1<char2)? char1: char2);
+//druhy znak deklarujem priamo v podmienkovom vyraze
+putchar((char1< (char2 = getchar())) ? char1: char2);
 
 return 0;
 }
