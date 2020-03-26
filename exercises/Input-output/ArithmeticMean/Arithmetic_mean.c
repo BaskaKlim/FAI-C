@@ -1,19 +1,34 @@
 #include <stdio.h>
 
+#define pocet(numbers)
 //zadaj 3 realne cisla a vypocitaj aritm.priemer zaokruhleny na dve desariny
 int main(){
 
-float o,p,r, aritMean;
+    float numbers[10]={};
+    float aritMean = 0.00;
+    float sum =0.00;
+    int pocetPrvkov;
+    int pocetNenulovychPrvkov=0;
 
-printf("Zadaj prve realne cislo: ");
-scanf("%f",&o);
-printf("\nZadaj druhe realne cislo: ");
-scanf("%f",&p);
-printf("\nZadaj tretie realne cislo: ");
-scanf("%f",&r);
+    printf("Zadaj prve realne cislo: ");
+    scanf("%f",&numbers[0]);
+    printf("\nZadaj druhe realne cislo: ");
+    scanf("%f",&numbers[1]);
+    printf("\nZadaj tretie realne cislo: ");
+    scanf("%f",&numbers[2]);
 
-aritMean = (o+p+r) / 3;
+    pocetPrvkov = sizeof(numbers)/sizeof(float);
 
-printf("Aritmeticky priemer cisel %6.2f %6.2f %6.2f je: %6.2f",o,p,r,aritMean);
+    for(int i=0; i <pocetPrvkov; i++){
+        if(numbers[i]!=0){
+            sum = sum + numbers[i];
+            printf("\nCislo: %f", numbers[i]);
+            pocetNenulovychPrvkov++;
+        }
+    }
+    printf("\nSuma je: %f",sum);
 
+    aritMean= sum/pocetNenulovychPrvkov;
+
+    printf("\nAritmeticky priemer cisel je: %f",aritMean);
 }
