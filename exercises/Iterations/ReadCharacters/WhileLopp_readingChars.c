@@ -16,10 +16,12 @@
 
  int character;
 
+ //preskocenie vsetkych bielych znakov, telo while prikazu moze ostat prazne v tomto pripade
+    while(character == ' ' || character == '\t' || character == '\n'){
+    }
+
  //kym sa stisknuty znak na klavesnici nerovna z
- while((character=getchar()) != 'z') {
-    //iba ak to nie je neviditelny znak
-    if(character >= ' ')
+    while((character=getchar()) != 'z') {
     //vypis znak
     putchar(character);
  }
