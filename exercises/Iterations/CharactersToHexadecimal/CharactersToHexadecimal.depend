@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1585398255 source:c:\users\barbara.klimekova\fai\c\exercises\iterations\characterstohexadecimal\characterstohexadecimal.c
+	<stdio.h>
+	<conio.h>
+
