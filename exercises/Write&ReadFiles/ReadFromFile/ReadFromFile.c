@@ -13,19 +13,16 @@ int main(){
 //definovanie premennej a suboru
 
 FILE *fr;
-int a,b,c;
-int sum;
+double a,b,c;
 
 
 fr= fopen("data.txt","r");
 //test ci subor obsahuje 3 vstupne hodnoty, fscanf()vracia pocet uspesne precitanych poloziek
-if (fscanf(fr, "%d %d %d ", &a,&b,&c)== 3) {
+if (fscanf(fr, "%lf %lf %lf ", &a,&b,&c)== 3) {
 
-printf("%d,%d,%d,\n",a,b,c); /**velmi dolezite je dat ciarky medzi %d alebo medzere a v takom formate mat aj file data **/
+printf("%lf,%lf,%lf,\n",a,b,c); /**velmi dolezite je dat ciarky medzi %d alebo medzere a v takom formate mat aj file data **/
 
-sum =a+b+c;
-
-printf("%d\n",sum);
+printf("%f\n",a+b+c);
 } else
 printf("Soubor data.txt neobsahuje 3 realne cisla \n");
 
