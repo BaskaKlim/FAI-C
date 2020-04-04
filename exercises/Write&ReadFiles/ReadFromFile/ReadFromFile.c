@@ -19,7 +19,7 @@ int sum;
 
 fr= fopen("data.txt","r");
 //test ci subor obsahuje 3 vstupne hodnoty, fscanf()vracia pocet uspesne precitanych poloziek
-if (fscanf(fr, "%d,%d,%d,", &a,&b,&c)== 3) {
+if (fscanf(fr, "%d %d %d ", &a,&b,&c)== 3) {
 
 printf("%d,%d,%d,\n",a,b,c); /**velmi dolezite je dat ciarky medzi %d alebo medzere a v takom formate mat aj file data **/
 
