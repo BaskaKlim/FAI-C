@@ -8,21 +8,23 @@ suboru
 **********************/
 
 #include <stdio.h>
+main(){
 
-int main(){
-//initialize variables
 FILE *fr, *fw;
 int c;
-//declare and open files
-fr= fopen("data.txt","r");
-fw = fopen("kopia.txt","w");
 
-//TODO
-c= getc(fr); //adding value of first char to variable c
-putc(c,fw); // puting c into fw file
+fr = fopen("data.txt", "r");
+
+fw = fopen("kopia.txt", "w");
+
+c = getc(fr);		 /* čítanie prvého znaku */
+putc(c, fw);		 /* zápis prvého znaku */
+
+putc(getc(fr),fw);	/* cítanie a zápis druhého znaku */
+
+
 
 fclose(fr);
 fclose(fw);
-
 return 0;
 }
