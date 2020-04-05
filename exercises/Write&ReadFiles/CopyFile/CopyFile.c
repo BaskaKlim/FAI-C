@@ -14,15 +14,12 @@ FILE *fr, *fw;
 int c;
 
 fr = fopen("data.txt", "r");
-
 fw = fopen("kopia.txt", "w");
 
-c = getc(fr);		 /* čítanie prvého znaku */
-putc(c, fw);		 /* zápis prvého znaku */
-
-putc(getc(fr),fw);	/* cítanie a zápis druhého znaku */
-
-
+/** podmienka nacitania znakov kym nepride program na koniec riadku vzdy cez != EOF nie '\n'**/
+while((c=getc(fr)) != EOF ){
+putc(c,fw);
+}
 
 fclose(fr);
 fclose(fw);
