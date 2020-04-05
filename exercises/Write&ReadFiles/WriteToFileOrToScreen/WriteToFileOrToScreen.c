@@ -14,8 +14,10 @@ int main() {
     while(getchar() != '\n')
         ;
 
+        //ak staci o
     if(c== 'o' || c=='O') {
         fw=stdout; //vypis na obrazovku ako putc(c,stdout) = putchar(c)
+    // ak stlaci iny znak
     } else {
         if ((fw=fopen("VYPIS.txt","w")) != NULL) {
             printf("Soubor VYPIS.txt existuje, prepsat[A/N]: ");
@@ -33,15 +35,23 @@ int main() {
             }
 
 
-            fw=fopen("VYPIS.txt","w");
+            if((fw=fopen("VYPIS.txt","w"))==NULL){
+               printf("Subor sa nepodarilo otvorit\n");
+               return 1;
+               }
         }
     }
+    //po ktorejkolvek moznosti pokracuje opat s komunikaciou s userom
     printf("Piste text, ktory chcete ulozit do suboru a ukoncite ho znakom *\n");
     while((c=getchar())!= '*') {
         putc(c,fw);
     }
+    //ak to nie je konsolovy zapis, ukonci subor
     if (fw != stdout) {
-        fclose(fw);
+        if(fclose(fw) == EOF) {
+            printf("Subor sa nepodarilo zavriet\n");
+            return 1;
+        }
     }
 
 
