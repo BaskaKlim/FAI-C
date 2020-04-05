@@ -14,8 +14,13 @@ int main(){
 FILE *fr, *fw;
 int c;
 
-fr = fopen("data.txt", "r");
-fw = fopen("kopia.txt", "w");
+if ( (fr = fopen("data.txt", "r")) == NULL){
+    printf("nepodarilo sa otvorit data.txt subor");
+}
+
+if ( (fw = fopen("kopia.txt", "w")) == NULL){
+    printf("nepodarilo sa otvorit kopia.txt subor");
+}
 
 
 
