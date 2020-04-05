@@ -24,12 +24,11 @@ putc(c,fw);
 }
 
 
-if( (fclose(fw)) == NULL){
+if(fclose(fw) == EOF){
  printf("Nepodarilo sa zavriet kopia.txt subor \n");
  }
 
-
-if( (fclose(fr)) == NULL){
+if(fclose(fr) == EOF){
     printf("Nepodarilo sa zavriet data.txt subor \n");
 }
 
