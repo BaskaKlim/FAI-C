@@ -19,7 +19,10 @@ int main(){
 FILE *fr;
 int c, lines =0, theLongest =0;
 
-fr=fopen("letter.txt","r");
+if((fr=fopen("letter.txt","r")) == NULL ){
+printf("subor sa nepodarilo nacitat");
+return 1;
+}
 
 
 while ((c=getc(fr))!= EOF){
@@ -37,7 +40,10 @@ while ((c=getc(fr))!= EOF){
 }
 printf("\n Najdlhsi riadok obsahoval %d znakov", theLongest);
 
-fclose(fr);
+if (fclose(fr) == EOF ){
+   printf("subor sa nepodarilo ulozit \n");
+   return 1;
+}
 return 0;
 }
 
