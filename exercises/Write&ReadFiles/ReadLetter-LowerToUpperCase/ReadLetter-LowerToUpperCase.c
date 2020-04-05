@@ -23,22 +23,19 @@ fr=fopen("letter.txt","r");
 
 
 while ((c=getc(fr))!= EOF){
-
-//namiesto bezneho putchar(c) tu napisem terarny operator pre zmenu upper a lowercase
-// z malych na velke cez  c+ 'A'-'a'
+//namiesto bezneho putchar(c) tu napisem terarny operator pre zmenu upper a lowercase z malych na velke cez  c+ 'A'-'a'
     putchar(c >='a' && c <= 'z' ? c +'A'-'a' : c);
-
-/*check konca riadky
-if(c == '\n'){
-   if(theLongest< lines){
-    theLongest = lines;
-    lines = 0;
-   } else
-   lines++;
+//check konca riadky
+    if(c == '\n'){
+        if(theLongest< lines){
+            theLongest = lines;
+        }
+        lines = 0;
+    } else {
+        lines++;
+    }
 }
-}*/
-}
-//printf("\n Najdlhsi riadok obsahoval %d znakov", theLongest);
+printf("\n Najdlhsi riadok obsahoval %d znakov", theLongest);
 
 fclose(fr);
 return 0;
